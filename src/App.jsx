@@ -3,6 +3,7 @@ import './App.css'
 import profiles from './assets/profile.json';
 import messages from './assets/wiadomosci.json';
 import { createId } from '@paralleldrive/cuid2';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 // id, data, twórca, tytuł, treść
@@ -32,8 +33,7 @@ function App() {
   }
 
   useEffect(() => {
-    const intervalId = setInterval(generatePost, 5000);
-
+    const intervalId = setInterval(generatePost, 3000);
     return () => clearInterval(intervalId);
   }, [generatePost]);
 
